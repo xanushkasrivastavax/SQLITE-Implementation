@@ -96,7 +96,7 @@
         app:layout_constraintTop_toBottomOf="@+id/inputName" />
 
     <Button
-        android:id="@+id/addUser"
+        android:id="@+id/login"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/btn_bg"
@@ -120,9 +120,9 @@
         android:text="Signup"
         android:textColor="#040303"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/addUser"
+        app:layout_constraintEnd_toEndOf="@+id/login"
         app:layout_constraintHorizontal_bias="0.976"
-        app:layout_constraintStart_toStartOf="@+id/addUser"
-        app:layout_constraintTop_toBottomOf="@+id/addUser" />
+        app:layout_constraintStart_toStartOf="@+id/login"
+        app:layout_constraintTop_toBottomOf="@+id/login" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
