@@ -1,29 +1,24 @@
 package com.example.loginapp_sqlite
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_main2.*
-import kotlinx.android.synthetic.main.activity_home.*
 
 class MainActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         lateinit var handler: DBHelper
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
-        val inputName=findViewById<EditText>(R.id.inputName)
-        val inputPassword=findViewById<EditText>(R.id.inputEmail)
-        val btn=findViewById<Button>(R.id.login)
+        val inputEmail=findViewById<EditText>(R.id.inputEmailLogin)
+        val inputPassword=findViewById<EditText>(R.id.inputPasswordLogin)
+        val loginBtn=findViewById<Button>(R.id.btn_signin)
 
-        btn.setOnClickListener {
+        loginBtn.setOnClickListener {
             handler= DBHelper(this)
-            val name = inputName.getText().toString()
+            val name = inputEmail.getText().toString()
             val password = inputPassword.getText().toString()
 
             if (name == "" || password == "")

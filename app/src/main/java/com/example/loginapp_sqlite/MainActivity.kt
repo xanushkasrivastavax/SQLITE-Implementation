@@ -8,9 +8,6 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_main2.*
-import kotlinx.android.synthetic.main.activity_home.*
 
 class MainActivity : AppCompatActivity() {
     @SuppressLint("Range")
@@ -18,13 +15,13 @@ class MainActivity : AppCompatActivity() {
         lateinit var handler: DBHelper
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val btn=findViewById<Button>(R.id.login)
-        val login=findViewById<TextView>(R.id.textView4)
-        login.setOnClickListener {
+        val signUpBtn=findViewById<Button>(R.id.btn_signup)
+        val redirectToSignup=findViewById<TextView>(R.id.redirect_signup)
+        redirectToSignup.setOnClickListener {
             val intent = Intent(this, MainActivity2::class.java)
             startActivity(intent)
         }
-        btn.setOnClickListener{
+        signUpBtn.setOnClickListener{
             handler= DBHelper(this)
             val inputName = findViewById<EditText>(R.id.inputName)
             val name=    inputName.getText().toString()
