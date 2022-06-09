@@ -6,7 +6,7 @@ import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
-class DBHelper (context: Context):SQLiteOpenHelper(context, dbname, factory, version) {
+class DBHelper(context: Context) : SQLiteOpenHelper(context, dbname, factory, version) {
 
     override fun onCreate(db: SQLiteDatabase?) {
         db?.execSQL("create table user(id integer primary key autoincrement," + "name varchar(30),email varchar(100),password varchar(20))")
